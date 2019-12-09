@@ -1,0 +1,47 @@
+.NewTodoForm > form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  margin: 50px 0;
+}
+
+.NewTodoForm > form > label {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.input-button {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.input-button input {
+  flex-grow: 1;
+  height: 40px;
+  font-size: 1.2rem;
+  padding: 0 20px;
+  border: 0;
+  margin-right: 5px;
+  height: 100%;
+}
+
+.input-button button {
+  background: 0;
+  border: 1px solid white;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 15px;
+  height: 100%;
+  cursor: pointer;
+  transition: background 0.2s ease-out;
+}
+
+.input-button button:hover {
+  background: rgb(71, 161, 245);
+}
+

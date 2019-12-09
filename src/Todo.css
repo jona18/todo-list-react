@@ -1,0 +1,93 @@
+.Todo {
+  display: flex;
+  margin-bottom: 5px;
+  padding: 1.1rem 50px;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.1);
+}
+
+.Todo-task {
+  position: relative;
+  transition: opacity 0.5s linear;
+  cursor: pointer;
+}
+
+.Todo-task.completed {
+  opacity: 0.5;
+}
+
+.Todo-task.completed:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -0.5rem;
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: white;
+  animation: strikeItem 0.5s ease-out 0s forwards;
+}
+
+@keyframes strikeItem {
+  to {width: calc(100% + 1rem)}
+}
+
+.Todo-buttons {
+  flex-shrink: 0;
+  padding-left: 0.7em;
+}
+
+.Todo-buttons button {
+  border: none;
+  font-size: 1em;
+  margin: 0.4em;
+  background: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  color: white;
+}
+
+.Todo-edit-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.Todo-edit-form label {
+  min-width: 100%;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.Todo-edit-form input {
+  flex-grow: 1;
+  border: none;
+  background: white;
+  padding: 0 20px;
+}
+
+.Todo-edit-form button {
+  padding: 0 1.3rem;
+  border: none;
+  background: rgb(81, 171, 255);
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 1px solid white;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease-out;
+}
+
+.Todo-edit-form button:hover {
+  background: rgb(71, 161, 245);
+}
+
+.Todo-edit-form input,
+.Todo-edit-form button {
+  font-family: 'Roboto';
+  height: 50px;
+  font-size: 1rem;
+}
